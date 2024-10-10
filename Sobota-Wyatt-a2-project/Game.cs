@@ -52,6 +52,7 @@ namespace Game10003
         }
         public void Update()
         {
+            //window set up
             Window.ClearBackground(mauveine);
 
             for (int i = 0; i < 6; i++)
@@ -59,14 +60,14 @@ namespace Game10003
                 DrawCircle(X[i], Y[i], colors[i], History[i]);
             }
         }
-
+        //drawing the circles
         void DrawCircle(float circleX, float circleY, Color circleColor, string circleHistory)
         {
             // we are not using circleX and circleY YET
             // ... how can we use those numbers below?
             float x = Input.GetMouseX();
             float y = Input.GetMouseY();
-
+            //using the mouse to find the circle 
             if (x >=  circleX - 50 && x <= circleX + 50 && y >= circleY - 50 && y <= circleY + 50)
             {
                 Draw.FillColor = circleColor;
